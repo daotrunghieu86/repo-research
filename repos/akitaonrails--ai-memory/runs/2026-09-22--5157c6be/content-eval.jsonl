@@ -1,0 +1,6 @@
+{"id":"CE-001","path":"docs/design-decisions.md","type":"methodology-doc","novelty":"high","value":"Explains why Markdown-in-Git is primary and how the project learned from prior-art failure modes."}
+{"id":"CE-002","path":"docs/temporal.md","type":"design-doc","novelty":"high","value":"Precise as_of validity semantics and explicit ranking limitations make temporal recall unusually rigorous."}
+{"id":"CE-003","path":"docs/auto-improvement-loop.md","type":"design-doc","novelty":"high","value":"Turns session learning into a staged, governed state machine rather than an implicit LLM rewrite."}
+{"id":"CE-004","path":"docs/prior-art-implementation-findings.md","type":"research-synthesis","novelty":"high","value":"Documents what was borrowed and what was deliberately not copied from nearby memory systems."}
+{"id":"CE-005","path":"docs/ARCHITECTURE.md","type":"architecture-doc","novelty":"medium","value":"Canonical operational invariants and recovery semantics; unusually comprehensive for a young project."}
+{"id":"CE-006","path":"SECURITY.md","type":"security-doc","novelty":"medium","value":"Clear single-trust-domain boundary and provider/data-export caveats prevent overclaiming."}
