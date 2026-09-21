@@ -1,0 +1,96 @@
+{
+  "schema_version": "3.0",
+  "repository": "akitaonrails/ai-memory",
+  "analyzed_at": "2026-09-22T06:22:00+07:00",
+  "depth": "standard",
+  "candidates": [
+    {
+      "id": "C-001",
+      "rank": 1,
+      "name": "File-first authoritative memory with rebuildable derived indexes",
+      "kind": "pattern",
+      "mechanism": "Keep durable knowledge as human-editable Markdown in Git; treat SQLite FTS/entities/links/embeddings as disposable acceleration state that can be reconstructed.",
+      "why_it_matters": "It preserves portability, auditability and tool-independence while still enabling fast hybrid retrieval.",
+      "limitations": "Filesystem and index writes cannot share a real atomic transaction, so reconciliation and invariant discipline are mandatory.",
+      "confidence": "confirmed",
+      "novelty": "high",
+      "portability": "high",
+      "relevance": "high",
+      "effort": "E2",
+      "evidence": [
+        "F-001",
+        "F-008"
+      ]
+    },
+    {
+      "id": "C-002",
+      "rank": 2,
+      "name": "Claim-once handoff as protocol",
+      "kind": "pattern",
+      "mechanism": "Represent cross-agent continuation as persisted typed handoff state with ownership, scope, acceptance and expiry instead of relying on prose summaries alone.",
+      "why_it_matters": "This turns agent switching into an explicit state transition and reduces duplicated or stale continuation context.",
+      "limitations": "Correctness depends on lifecycle hooks and scope identity; unsupported clients may need explicit finalization.",
+      "confidence": "confirmed",
+      "novelty": "high",
+      "portability": "high",
+      "relevance": "high",
+      "effort": "E1",
+      "evidence": [
+        "F-002"
+      ]
+    },
+    {
+      "id": "C-003",
+      "rank": 3,
+      "name": "Multi-stream retrieval with bounded authority",
+      "kind": "pattern",
+      "mechanism": "Fuse lexical, entity, graph and optional vector candidates with reciprocal-rank fusion, then use small bounded metadata authority adjustments and optional reranking.",
+      "why_it_matters": "It avoids betting memory quality on a single retrieval method and keeps durable canonical knowledge favored without hard-hiding episodic evidence.",
+      "limitations": "More streams create tuning and explainability complexity; vector and historical modes intentionally diverge.",
+      "confidence": "confirmed",
+      "novelty": "high",
+      "portability": "medium",
+      "relevance": "high",
+      "effort": "E2",
+      "evidence": [
+        "F-003",
+        "F-011"
+      ]
+    },
+    {
+      "id": "C-004",
+      "rank": 4,
+      "name": "Separate learning review from live capture",
+      "kind": "pattern",
+      "mechanism": "Capture synchronously only enough to persist bounded observations; run session learning in a background scheduler that stages proposals, applies policy/eval gates, retries transient failures and parks deterministic failures.",
+      "why_it_matters": "The agent hot path stays reliable while the memory can still improve itself from completed work.",
+      "limitations": "Auto-application increases governance requirements; provider-backed review is not zero-LLM and can export bounded context.",
+      "confidence": "confirmed",
+      "novelty": "high",
+      "portability": "medium",
+      "relevance": "high",
+      "effort": "E3",
+      "evidence": [
+        "F-004",
+        "F-010"
+      ]
+    },
+    {
+      "id": "C-005",
+      "rank": 5,
+      "name": "Historical recall as validity-window retrieval",
+      "kind": "knowledge",
+      "mechanism": "Resolve the page/entity version whose validity interval contains an as_of instant and combine version-filtered FTS with temporal entity links.",
+      "why_it_matters": "It answers 'what did we know then?' instead of only searching today's rewritten memory.",
+      "limitations": "Historical ranking is not a replay of the ranking that existed at that time; vectors and graph neighbors remain present-tense and are excluded.",
+      "confidence": "confirmed",
+      "novelty": "high",
+      "portability": "medium",
+      "relevance": "medium",
+      "effort": "E2",
+      "evidence": [
+        "F-011"
+      ]
+    }
+  ]
+}

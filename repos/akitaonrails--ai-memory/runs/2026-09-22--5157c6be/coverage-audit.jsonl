@@ -1,0 +1,8 @@
+{"area":"full tracked tree","status":"inventoried","evidence":"817 entries"}
+{"area":"architecture and design docs","status":"sampled-deeply","evidence":"ARCHITECTURE, design-decisions, temporal, auto-improvement, prior-art"}
+{"area":"core code","status":"sampled-via-search","evidence":"sanitize, retrieval, auto-improve scheduler/store"}
+{"area":"tests","status":"inventory-plus-excerpts","evidence":"broad suites visible; no local execution"}
+{"area":"CI/security","status":"sampled","evidence":"workflows, gitleaks config, Cargo lints, CONTRIBUTING"}
+{"area":"history","status":"deferred","reason":"Standard mode skips 12-month history"}
+{"area":"benchmarks","status":"deferred","reason":"benchmark docs inventoried but not independently reproduced"}
+{"area":"remaining docs/source","status":"deferred","reason":"Standard evidence cap"}
