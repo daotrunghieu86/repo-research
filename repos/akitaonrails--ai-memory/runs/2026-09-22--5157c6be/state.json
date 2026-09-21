@@ -1,0 +1,34 @@
+{
+  "skill": "repo-research-workflow",
+  "version": "7.1",
+  "slug": "akitaonrails-ai-memory",
+  "target_repo": "github.com/akitaonrails/ai-memory",
+  "target_commit": "5157c6be10b5830d7adc7e29b0a4358c3ecbe6a2",
+  "status": "in-progress",
+  "phase": 8,
+  "depth": "standard",
+  "output_root": "repos/akitaonrails--ai-memory/runs/2026-09-22--5157c6be",
+  "completed_phases": [
+    "resolve-source",
+    "record-commit",
+    "broad-inventory",
+    "inspect-distinctive-code-docs",
+    "collect-evidence",
+    "rank-ideas",
+    "identify-weaknesses",
+    "write-core-artifacts",
+    "deterministic-validation-prepared"
+  ],
+  "deferred_items": [
+    "12-month history (Deep only)",
+    "local test execution",
+    "Semgrep/gitleaks/cargo-audit runtime scans",
+    "full benchmark reproduction",
+    "remaining docs/source beyond Standard cap",
+    "independent fresh-context semantic review"
+  ],
+  "budget_seconds": 900,
+  "budget_exhausted": false,
+  "review_gate": "blocked-no-independent-model-tool",
+  "resume_action": "Run an independent fresh-context reviewer (Claude CLI if available, otherwise separate subscription-backed Codex) read-only over this run and target commit. Save PASS/actionable findings to review.md; repair findings, revalidate analysis.json and value-map.json, then set status=complete."
+}
