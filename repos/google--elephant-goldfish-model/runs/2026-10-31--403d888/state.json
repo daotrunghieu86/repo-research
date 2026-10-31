@@ -1,0 +1,35 @@
+{
+  "status": "complete",
+  "depth": "standard",
+  "skill_repository": "misumi-hieu-dao-01/personal-brain-skills",
+  "skill_path": "skills/personal-brain-repo-analysis",
+  "skill_commit": "8fbb49df746a6e7e91b079e45fab68e1b4eebc3c",
+  "target_repository": "google/elephant-goldfish-model",
+  "target_commit": "403d8881d62022490637d740657b33f01e321ea8",
+  "output_repository": "daotrunghieu86/repo-research",
+  "canonical_output_root": "repos/google--elephant-goldfish-model/runs/2026-10-31--403d888",
+  "execution_environment": "ChatGPT Work managed cloud",
+  "persisted": true,
+  "completed_phases": [
+    "preflight",
+    "inventory",
+    "inspection",
+    "synthesis",
+    "schema-validation",
+    "independent-semantic-review"
+  ],
+  "deferred": [
+    "Live EGM execution",
+    "External essay",
+    "Unselected files",
+    "Longitudinal history",
+    "Administrative security checks"
+  ],
+  "budget_minutes": 15,
+  "budget_exhausted": false,
+  "clone_transport": "connected GitHub API snapshot; local clone omitted under connector-only rule",
+  "failed_clone_attempts": [],
+  "prior_feedback": null,
+  "review_verdict": "PASS",
+  "persistence_note": "This state is published atomically with immutable report files; remote bytes verified after publication."
+}
