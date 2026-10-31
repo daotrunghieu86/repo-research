@@ -1,0 +1,79 @@
+{
+  "schema_version": "3.0",
+  "repository": "google/elephant-goldfish-model",
+  "analyzed_at": "2026-10-31",
+  "depth": "standard",
+  "candidates": [
+    {
+      "id": "fresh-artifact-handoff",
+      "name": "Fresh artifact handoff",
+      "kind": "pattern",
+      "mechanism": "Review in a new context using explicit artifact and source inputs.",
+      "why_it_matters": "Makes unstated conversation assumptions visible.",
+      "limitations": "Host context and shared filesystem still need isolation checks.",
+      "evidence": [
+        "F-003",
+        "F-004"
+      ],
+      "confidence": "confirmed",
+      "novelty": "medium",
+      "portability": "high",
+      "relevance": "high",
+      "effort": "E1",
+      "rank": 1
+    },
+    {
+      "id": "native-trace-proof",
+      "name": "Native trace proof",
+      "kind": "pattern",
+      "mechanism": "Validate real reviewer dispatch, successful reads and completion.",
+      "why_it_matters": "Prevents a model receipt from masquerading as executed review.",
+      "limitations": "Native traces may be unavailable on cloud surfaces.",
+      "evidence": [
+        "F-009",
+        "F-010"
+      ],
+      "confidence": "confirmed",
+      "novelty": "high",
+      "portability": "high",
+      "relevance": "high",
+      "effort": "E1",
+      "rank": 2
+    },
+    {
+      "id": "second-simplicity-pass",
+      "name": "Second simplicity pass",
+      "kind": "pattern",
+      "mechanism": "Review architecture again after critique adds mitigations.",
+      "why_it_matters": "Catches complexity introduced by the review process itself.",
+      "limitations": "Adds latency and has unmeasured marginal benefit.",
+      "evidence": [
+        "F-002"
+      ],
+      "confidence": "confirmed",
+      "novelty": "medium",
+      "portability": "high",
+      "relevance": "high",
+      "effort": "E1",
+      "rank": 3
+    },
+    {
+      "id": "contract-drift-check",
+      "name": "Contract and drift checking",
+      "kind": "pattern",
+      "mechanism": "Generate bounded component contracts and compare them with current source.",
+      "why_it_matters": "Offers reusable repository onboarding context.",
+      "limitations": "Agent judgments need checking and do not prove equivalence.",
+      "evidence": [
+        "F-007",
+        "F-008"
+      ],
+      "confidence": "confirmed",
+      "novelty": "medium",
+      "portability": "high",
+      "relevance": "high",
+      "effort": "E1",
+      "rank": 4
+    }
+  ]
+}
